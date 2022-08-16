@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>IMC</title>
+    <h1>Calculadora de masa corporal (IMC)</h1>
+
+    <script>
+        function saltarLinea(){
+            document.write("<br>");
+            document.write("<br>");
+            document.write("<br>");
+        }
+        function imprimir(frase){
+            document.write(frase);
+            saltarLinea(); 
+        }
+        function calcularImc(peso,altura){
+            return (peso/(altura * altura));
+        }
+
+        nombre = prompt("Escriba su nombre");
+        pesoInformado =prompt(nombre + ", informe su peso");
+        alturaInformada =prompt(nombre + ", informe su altura");
+        imcCalculado = calcularImc(pesoInformado, alturaInformada);
+        
+        imprimir(nombre + ", su imc calculado es: " + imcCalculado);
+
+        if (imcCalculado < 18.5){
+            imprimir("Insuficiencia ponderal");
+        }
+        if (imcCalculado >= 18.5){
+            if (imcCalculado < 25){;
+            imprimir("Estas en el rango normal");
+        }
+        }
+        if (imcCalculado >= 25 ){
+            if (imcCalculado < 30){;
+            imprimir("Estas en el rango del sobrepeso");
+        }
+        }
+        if (imcCalculado >= 30){
+            imprimir("Estas en el rango de obesidad");
+        }
+
+
+
+    </script>
+
+
+</head>
+<body>
+    
+</body>
+</html>
